@@ -72,24 +72,7 @@ The RISC-V has been designed to support extensive customization and specializati
 
 
 
-<details>
-<summary><strong>Labwork for RISC-V Software Toolchain</strong>/summary>
-Under this section, we first create a C program file and verify if the logic using gcc. Here we have made a program to sum all the numbers from 1 to 50. Code for sum1toN.c ->
 
-```bash
-#include <stdio.h>
-int main(){
-int n = 100,sum=0,i;
-for(i=0;i<=n;i++)
-{
-    sum= sum +i;
-}
-printf("The sum of %d consecutive numbers is :%d \n",n,sum);
-return 0;
-}
-```
- 
-</details>
 
 
 ## DAY 2 - Introduction to Application Binary Interface and Basic Error Flow
