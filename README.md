@@ -118,7 +118,7 @@ return 0;
 
 <details>
 
-<summary><strong>Number System Representation </strong></summary>
+<summary><strong>Number System Representation with Labworl  </strong></summary>
 
 In RISC-V and computer architecture in general, several terms relate to data representation and storage. Let's explore them:
 
