@@ -71,10 +71,9 @@ The RISC-V has been designed to support extensive customization and specializati
 </details>
 
 
+
 <details>
-
 <summary><strong>Labwork for RISC-V Software Toolchain</strong>/summary>
-
 Under this section, we first create a C program file and verify if the logic using gcc. Here we have made a program to sum all the numbers from 1 to 50. Code for sum1toN.c ->
 
 ```bash
