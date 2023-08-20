@@ -37,9 +37,9 @@ sudo make install
 - Now set the PATH variable in .bashrc file
 
 ```bash
-gedit .bashrc
-#Instead of Alwin put your username
-export PATH="/home/Alwin/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH" #Type at last line # close the bashrc and type
+gedit .bashrchttps://vsdiat.com/home
+#Instead of shant put your username
+export PATH="/home/shant/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH" 
 source .bashrc
 
 ```
