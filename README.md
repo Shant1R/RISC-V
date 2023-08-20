@@ -51,12 +51,22 @@ source .bashrc
 
 RISC-V is an open-source instruction set architecture (ISA) for computer processors. An instruction set architecture defines the set of instructions that a processor can execute and the organization and behaviour of those instructions. RISC-V is unique in that any single company or organization does not own it. and it is freely available for anyone to use, modify, and implement without the need for licensing fees or proprietary restrictions.
 
+![risc1](https://github.com/Shant1R/RISC-V/assets/59409568/a9782f60-fa86-454a-af08-6a7d56a4c4e2)
  
  - Application software (apps) and hardware are linked by 'system software'.There are various layers of **system software**. This includes major components like Compiler and Assembler.
  - The compiler compiles high-level codes like C and C++ to Instructions(eg: the codes inside .exe files) that can be read by the Assembler.
  - The Assembler converts it into binary codes which the machine can understand. The instructions act as an interface between the high-level language and the machine language.
  - The converted binary is then given to an RTL snippet that understands the instruction. This is done by a Hardware Description Language (HDL).
  - This is basically called RTL implementation and a netlist is being generated. with this, a physical design implementation of the design is generated.
+
+The RISC-V has been designed to support extensive customization and specialization which can be extended  with  one  or  more  optional  instruction-set  extensions,  but  the  base  integer instructions cannot be redefine. The different instructions included in RISC-V are listed below.
+
+1. Pseudo instructions - For e.g- mv,li,ret etc
+2. Base integer instruction (RV64I, RV32I)-For e.g-lui,addi etc
+3. Multiply extension (RV64M) -For e.g- mulw,divw etc
+4. Single and double floating point instruction (RV64F, RV64D) -For e.g- flw,fadd etc
+5. Application binary instruction 
+6. Memory allocation and stack pointer
 
 </details>
 
