@@ -108,7 +108,7 @@ return 0;
 /home/shant/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-objdump -d sum1toN.o | less
 ```
 
-- We can observe that the number of instrucions have reduced to 12 from 15.
+- We can observe that the number of instrucions have reduced to 10 from 15.
 
 ![Screenshot from 2023-08-20 23-05-37](https://github.com/Shant1R/RISC-V/assets/59409568/83cce545-97dc-475c-bdf6-daf938228842)
 
