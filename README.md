@@ -342,17 +342,33 @@ It uses different registers(32 in number) which are each of width of 32 bit for 
 
 
 
-
-
-
 <Details>
 
 <summary><strong>Lab on ABI Function Cells</strong></summary>
+
+Under this section, we look into how to convert write an equivalent c program using the ABI registers for RISC-V. We have taken the example for the program to add the numbers from 1 tp 10.
+
+- Algorithm for the given operation is -->
+
+![Screenshot from 2023-08-21 17-29-00](https://github.com/Shant1R/RISC-V/assets/59409568/ce511ce6-1021-4638-b49c-59fb96909c77)
+
+- C code for the summation
+```bash
+#include <stdio.h>
+extern int load(int x,int y);
+int main()
+ {
+ 	int result = 0;
+	int count =9;
+ 	result = load(0x0,count+1);
+ 	printf("Sum of numbers from 1 to %d is %d\n",count,result);
+ } 
+```
+
  
 </Details>
 
 <details>
-
 <summary><strong>Verification FLow using iverilog</strong></summary>
  
 </details>
