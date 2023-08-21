@@ -470,7 +470,8 @@ Under this section, we will go over a few lab examples using Makerchip to have a
 
 ***Loading Pythagorean Implementation Example on Makerchip IDE***
 
-![Screenshot from 2023-08-21 19-10-22](https://github.com/Shant1R/RISC-V/assets/59409568/adb2e2d4-da8d-4d5b-aca3-9ed277727065)
+![Screenshot from 2023-08-21 19-12-44](https://github.com/Shant1R/RISC-V/assets/59409568/97fb65fa-e161-4c35-bb29-19d601939fed)
+
 
  
 </details>
