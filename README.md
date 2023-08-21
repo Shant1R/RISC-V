@@ -182,6 +182,45 @@ Integer number representation refers to the method used to represent whole numbe
 
 ***Lab 1***
 
+- Under this, we execute the code to find out the biggest 64 bit number stored, using the c file unsigned.c
+
+```bash
+#include <stdio.h>
+#include <math.h>
+int main() {
+unsigned long long int max = (unsigned long long int) (pow(2,64) -1);
+printf("highest number represented by unsigned long long int is %llu\n", max);
+return 0;
+}
+```
+
+- Upon execution, we determine the highest numerical value.
+
+![Screenshot from 2023-08-21 14-54-16](https://github.com/Shant1R/RISC-V/assets/59409568/bf9f1797-f283-4ff1-8015-884b9e80efd0)
+
+- This can be verified by putting power value more than 64, we will still get the same value.
+- Upon going below, we get a smaller value.
+- In case, we multiply the value by -1 in the code, we get output as 0.
+
+```bash
+unsigned long long int max = (unsigned long long int) (pow(2,10) * -1);
+```
+
+![Screenshot from 2023-08-21 15-00-49](https://github.com/Shant1R/RISC-V/assets/59409568/b8130b2d-f78a-4a7e-b97d-bb85721dec5a)
+
+- To obtain a negetive value, we would remove the *unsigned* keyword.
+
+```bash
+long long int max = (long long int) (pow(2,10) * -1);
+```
+
+![Screenshot from 2023-08-21 15-05-49](https://github.com/Shant1R/RISC-V/assets/59409568/14d1fbb6-486a-447f-bc28-1de932b37240)
+
+
+
+ 
+
+
 ***Lab 2***
  
 </details>
