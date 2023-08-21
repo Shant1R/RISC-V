@@ -414,12 +414,52 @@ Under the previous section, we saw how to run a C program and the assembly level
 - The image describes the flow for the operations.
 - We have riscv cpu program code through which we send the HEX format file of c program to show output the output of the given code.
 
+***Have to complete this***
 
-  
- 
 </details>
 
 ## DAY 3 - Introduction to TL Verilog and Makerchip
+
+<details>
+<summary><strong>Introduction</strong></summary>
+ 
+</details>
+
+
+<details>
+<summary><strong>Combinational Logic</strong></summary>
+ 
+</details>
+
+
+
+<details>
+<summary><strong>Sequential Logic</strong></summary>
+ 
+</details>
+
+
+
+<details>
+<summary><strong>Pipelined Logic</strong></summary>
+ 
+</details>
+
+
+
+<details>
+<summary><strong>Validity</strong></summary>
+ 
+</details>
+
+
+
+<details>
+<summary><strong>Wrap Up</strong></summary>
+ 
+</details>
+
+
 
 ## DAY 4 - Basic RISC-V CPU Micro-Architecture
  
