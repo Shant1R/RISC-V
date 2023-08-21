@@ -468,23 +468,23 @@ There are several example designs on makerchip to practice and get familiaried w
 
 Under this section, we will go over a few lab examples using Makerchip to have a firm grasp.
 
-***Loading Pythagorean Implementation Example on Makerchip IDE***
+- ***Loading Pythagorean Implementation Example on Makerchip IDE***
 
 ![Screenshot from 2023-08-21 19-12-44](https://github.com/Shant1R/RISC-V/assets/59409568/97fb65fa-e161-4c35-bb29-19d601939fed)
 
-***NOT Gate or INVERTER using Makerchip IDE***
+- ***NOT Gate or INVERTER using Makerchip IDE***
 
 ![Screenshot from 2023-08-21 19-17-12](https://github.com/Shant1R/RISC-V/assets/59409568/d7d95f96-8338-4a03-afb5-857a32f9d592)
 
-***NAND Gate using Makerchip IDE***
+- ***NAND Gate using Makerchip IDE***
 
 ![Screenshot from 2023-08-21 19-19-05](https://github.com/Shant1R/RISC-V/assets/59409568/226f5d3d-8e4f-4d9c-9c02-404a36a2643a)
 
-***Lab on Vector usage on TLverilog using Makerchip IDE***
+- ***Lab on Vector usage on TLverilog using Makerchip IDE***
 
 ![Screenshot from 2023-08-21 19-23-03](https://github.com/Shant1R/RISC-V/assets/59409568/94e2f15c-39a0-47dd-b0e1-24c8af15ec72)
 
-
+-  ***Implementation of MUX using Makerchip IDE***
  
 </details>
 
