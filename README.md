@@ -553,6 +553,11 @@ Pipelining or timing abstract is an important feature in TL verilog as it can be
 
 ![Screenshot from 2023-08-21 22-46-05](https://github.com/Shant1R/RISC-V/assets/59409568/b42db4a1-f350-41c2-8f43-4bb01f5aa242)
 
+***Fibonacci Series in Pipeline***
+
+![Screenshot from 2023-08-21 23-05-14](https://github.com/Shant1R/RISC-V/assets/59409568/66861067-a0f5-455e-aad1-e8a0940fa82c)
+
+![Screenshot from 2023-08-21 23-06-28](https://github.com/Shant1R/RISC-V/assets/59409568/7015b8b1-1e1b-4e1a-8844-44a05faf49f5)
 
  
 </details>
