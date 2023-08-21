@@ -277,7 +277,24 @@ There are different interfaces in a computer system.
 
 We have gone through the ISA and RTL layer interfaces. One such interface is ABI. If an applicatin programmer has to access the hardware resources, one has to do it using the registers, which is done using the ABI also known as system calls. 
 
+To have a better understanding, we need to have an insight into the memory and storage for RISC-V. 
+
+- RISC V belongs to the little endian memory addressing system, which means that the least significant byte of a word is stored in the smallest memory address. 
+- In RISC V architecture, the width of the register is defined as XLEN. For RV64 and RV32, the widths are 64 bits and 32 bits, respectively.
+- It is to note that there are 32 registor provided, which can be of 32 or 64 bits.
+- There are two ways to store a data into the registors
+
+![Screenshot from 2023-08-21 16-00-23](https://github.com/Shant1R/RISC-V/assets/59409568/9c44636f-01f9-42b0-b6d2-40a64981b9f5)
+
+- First, one can directly store the data into the registors, The second being via memory.
+- The data is split into 8 parts of each being 8 bits, ie double-words each. Then the most significant byte is stored in the little endian procedure. 
+ 
 </details>
+
+
+
+
+
 
 <Details>
 
