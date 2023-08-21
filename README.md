@@ -517,6 +517,15 @@ Under this section, we will look into the implementation of sequential logic cir
 
 ![Screenshot from 2023-08-21 20-06-27](https://github.com/Shant1R/RISC-V/assets/59409568/a55ff9ab-6bdb-49a8-b019-502f0857c964)
 
+***Sequentail Calculator***
+- We implement a sequential calculator that updates on each clock cycle.
+- The circuit diagram
+
+![Screenshot from 2023-08-21 20-14-25](https://github.com/Shant1R/RISC-V/assets/59409568/8e324946-81c9-44ff-9cbd-a9ceda2eec4e)
+
+- The implementation on Makerchip IDE.
+
+![Screenshot from 2023-08-21 20-19-17](https://github.com/Shant1R/RISC-V/assets/59409568/d026e26f-48e1-4d23-b67e-c6597129c9c4)
   
  
 </details>
