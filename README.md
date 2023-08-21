@@ -288,6 +288,33 @@ To have a better understanding, we need to have an insight into the memory and s
 
 - First, one can directly loaded into the data into the registors, The second being via memory.
 - The data is split into 8 parts of each being 8 bits, ie double-words each. Then the most significant byte is loaded into the little endian procedure and so forth. 
+
+
+Now, we will look into how to do some basic functions and they structure of the said instruction for the operation. 
+
+***Operation load***
+
+```bash
+ld x8,16(x23)
+```
+![Screenshot from 2023-08-21 16-23-55](https://github.com/Shant1R/RISC-V/assets/59409568/6a153963-21cb-4be2-8e4f-9910c4a7d081)
+
+
+***Operation add***
+
+```bash
+add x8,x29,x8
+```
+![Screenshot from 2023-08-21 16-24-13](https://github.com/Shant1R/RISC-V/assets/59409568/54290ba8-f719-4be1-8605-06dd28fee9d4)
+
+
+***Operation store***
+
+```bash
+sd x8,8(x23)
+```
+![Screenshot from 2023-08-21 16-24-34](https://github.com/Shant1R/RISC-V/assets/59409568/765f8f21-41d7-4988-ab7b-a569ee1dcb9f)
+
  
 </details>
 
