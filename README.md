@@ -619,7 +619,40 @@ Validity is another feature in TL verilog which is asserted if a particular tran
 - TL-Verilog can produce fine-grained gating (or enables).
 
 Thus, in TLverilog, we don't have to look into clock gating individually. It gets considered and covered with the Validity concept.
- 
+
+***Distance Accumulator using Makerchip IDE***
+
+- The pipelined block diagram for the accumulator
+
+![Screenshot from 2023-08-22 00-35-34](https://github.com/Shant1R/RISC-V/assets/59409568/da2db1b9-97e7-4aae-8de0-52896328f434)
+
+- Code for the design on TLverilog
+```bash
+|calc
+      
+      @1
+         $reset = *reset;    
+      
+      ?$valid
+         @1
+            $aa_sq[31:0] = $aa[3:0] ** 2;
+            $bb_sq[31:0] = $bb[3:0] ** 2;
+          @2
+            $cc_sq[31:0] = $aa_sq + $bb_sq;
+          @3
+            $cc[31:0] = sqrt($cc_sq);
+            
+      @4
+         $tot_dis[63:0] = 
+                   $reset ? '0 :
+                   $valid ? >>1$tot_dis + $cc :
+                            >>1$tot_dis;
+```
+
+- Implementation using Makerchip IDE
+
+![Screenshot from 2023-08-22 00-42-40](https://github.com/Shant1R/RISC-V/assets/59409568/8d5a2474-a29c-4ef6-8af0-c368fae02458)
+
 </details>
 
 
