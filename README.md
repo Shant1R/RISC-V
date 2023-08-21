@@ -385,6 +385,16 @@ loop:
      ret
 ```
 
+- We execute the program on the terminal using the following set of commands.
+
+```bash
+riscv64-unknown-elf-gcc -ofast -o custom1to10.o custom1to10.c load.S
+./riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/spike  pk custom1to10.o
+riscv64-unknown-elf-objdump -d custom1to10.o  | less
+```
+
+![Screenshot from 2023-08-21 17-44-46](https://github.com/Shant1R/RISC-V/assets/59409568/2b040457-d5dc-4e22-a4cd-385940056f59)
+
  
 </Details>
 
