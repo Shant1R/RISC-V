@@ -701,6 +701,18 @@ Under this lab work we design a 2-cycle calculator along with the validity funct
 
 ***Calculator with Single-value Memory***
 
+Under this lab work, we design a calculator with a memory component.
+
+- Pipelined design to be implemented.
+
+![Screenshot from 2023-08-22 01-11-53](https://github.com/Shant1R/RISC-V/assets/59409568/6a947811-bc96-421c-97cf-e146f54b05ce)
+
+- Code on TLverilog
+
+- Implementation on Makerchip IDE.
+
+
+
 </details>
 
 
