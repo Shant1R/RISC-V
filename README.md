@@ -300,9 +300,9 @@ ld x8,16(x23)
 ![Screenshot from 2023-08-21 16-23-55](https://github.com/Shant1R/RISC-V/assets/59409568/6a153963-21cb-4be2-8e4f-9910c4a7d081)
 
 - The opcode for ld is defined in opcode and funct3.
-- rd defines the destination registor
-- rs1 points to the memory location for loading.
-- immediate gives the exact memory location for loading by adding it to the rs1 value.
+- rd defines the destination register
+- rs1 points to the memory location for loading, ie source register.
+- immediate gives the exact memory location for loading by adding it to the rs1 value, ie offset.
 
 ***Operation add***
 
@@ -311,6 +311,9 @@ add x8,x29,x8
 ```
 ![Screenshot from 2023-08-21 16-24-13](https://github.com/Shant1R/RISC-V/assets/59409568/54290ba8-f719-4be1-8605-06dd28fee9d4)
 
+- The opcode for ld is defined in opcode, funct3 and funct7.
+- rd defines the destination register
+- rs1 and rs2 are the two source registers.
 
 ***Operation store***
 
@@ -319,6 +322,9 @@ sd x8,8(x23)
 ```
 ![Screenshot from 2023-08-21 16-24-34](https://github.com/Shant1R/RISC-V/assets/59409568/765f8f21-41d7-4988-ab7b-a569ee1dcb9f)
 
+- The opcode for ld is defined in opcode and funct3.
+- rs1 and rs2 are the two source registers.
+- immediate ie offset is split into two parts.
  
 </details>
 
