@@ -422,6 +422,28 @@ Under the previous section, we saw how to run a C program and the assembly level
 
 <details>
 <summary><strong>Introduction</strong></summary>
+
+Under this section, we are going to look into:
+
+- Logic gates
+- MakerChip platform(IDE)
+- Combinational Logic
+- Sequential Logic
+- Piplining logic
+- State
+
+We will be using TLverilog which is an extension of verilog and Makerchip IDE to visualise the design.
+
+***Logic Gates***
+- Logic gates are fundamental building blocks of digital circuits. They are electronic devices that perform basic logical operations on one or more binary inputs (usually 0 or 1) to produce a single binary output. These gates are the foundation of all digital systems, including computers, microcontrollers, and other digital devices. Logic gates are typically implemented using electronic components such as transistors.
+- The most common logic gates are:
+1. NOT
+2. AND
+3. OR
+4. NAND
+5. NOR
+6. XOR
+7. XNOR
  
 </details>
 
