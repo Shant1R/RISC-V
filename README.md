@@ -271,7 +271,17 @@ Table for memory size along with the format specifier for various data types.
 
 </details>
 
-<>
+<Details>
+
+<summary><strong>Lab on ABI Function Cells</strong></summary>
+ 
+</Details>
+
+<details>
+
+<summary><strong>Verification FLow using iverilog</strong></summary>
+ 
+</details>
 
 ## DAY 3 - Introduction to TL Verilog and Makerchip
 
