@@ -564,7 +564,39 @@ Pipelining or timing abstract is an important feature in TL verilog as it can be
 
 ![Screenshot from 2023-08-21 23-27-31](https://github.com/Shant1R/RISC-V/assets/59409568/3992333b-027d-46b4-addf-c420e26fc858)
 
+
+***Counter and Calculator in Pipeline***
+
+![Screenshot from 2023-08-21 23-46-12](https://github.com/Shant1R/RISC-V/assets/59409568/de9b933d-cf40-421c-86fc-9a0afd47af0b)
+
 ***2-Cycle Calculator***
+- Under this lab work, we have to implement the given pipelined circuit
+
+![Screenshot from 2023-08-21 23-49-16](https://github.com/Shant1R/RISC-V/assets/59409568/e4ece843-45cb-4eb0-a714-17a5515ec71d)
+
+- Implementation on Makerchip IDE is shown as below.
+
+```bash
+$reset = *reset;
+   
+   |calc
+      @1
+         $val1[31:0] = >>2$out[31:0];
+         $val2[31:0] = $rand2[3:0];
+
+         $sum[31:0] = $val1+$val2;
+         $dif[31:0] = $val1-$val2;
+         $mul[31:0] = $val1*$val2;
+         $div[31:0] = $val1/$val2;
+         $valid[1:0] = $reset ? 0 : >>1$valid + 1'b1;
+         
+      @2
+         $out[31:0] = !($reset &&  !($valid))? 1 :($op[1] ? ($op[0] ? $div : $mul):($op[0] ? $dif : $sum));
+         
+```  
+- Makerchip IDE
+
+![Screenshot from 2023-08-21 23-58-16](https://github.com/Shant1R/RISC-V/assets/59409568/99bb5b8d-3a96-4e1f-8191-e0ca11c56471)
 
 
  
