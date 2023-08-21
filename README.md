@@ -510,6 +510,10 @@ Under this section, we will look into the implementation of sequential logic cir
 
 ***Fibonacci Series Implementation***
 - Fibonacci series is a number is the sum of its previous two numbers, ie. 1,1,2,3,5,8,13,.....
+
+![Screenshot from 2023-08-21 20-01-47](https://github.com/Shant1R/RISC-V/assets/59409568/6bc181c9-4324-4398-a4b5-3270c97ab529)
+
+
   
  
 </details>
