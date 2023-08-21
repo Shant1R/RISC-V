@@ -513,6 +513,9 @@ Under this section, we will look into the implementation of sequential logic cir
 
 ![Screenshot from 2023-08-21 20-01-47](https://github.com/Shant1R/RISC-V/assets/59409568/6bc181c9-4324-4398-a4b5-3270c97ab529)
 
+***Free-running Counter***
+
+![Screenshot from 2023-08-21 20-06-27](https://github.com/Shant1R/RISC-V/assets/59409568/a55ff9ab-6bdb-49a8-b019-502f0857c964)
 
   
  
