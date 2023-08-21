@@ -655,6 +655,21 @@ Thus, in TLverilog, we don't have to look into clock gating individually. It get
 
 
 ***2-Cycle Calculator with Validity***
+Under this lab work we design a 2-cycle calculator along with the validity functionality.
+
+- Pipelined Logic Design to be implemented
+
+![Screenshot from 2023-08-22 00-56-10](https://github.com/Shant1R/RISC-V/assets/59409568/350d2d90-6f9a-4cd9-a2e9-7265104f6c39)
+
+- Code on TLverilog
+
+```bash
+BKL
+```
+
+- Implementation on Makerchip IDE.
+
+
 
 ***Calculator with Single-value Memory***
 
