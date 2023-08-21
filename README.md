@@ -559,6 +559,12 @@ Pipelining or timing abstract is an important feature in TL verilog as it can be
 
 ![Screenshot from 2023-08-21 23-06-28](https://github.com/Shant1R/RISC-V/assets/59409568/7015b8b1-1e1b-4e1a-8844-44a05faf49f5)
 
+***Creating the given Pipelined Circuit on Makerchip IDE***
+- Under this, we are given a pipelined structure and asked to recreate it on Makerchip using TLverilog
+
+![Screenshot from 2023-08-21 23-27-31](https://github.com/Shant1R/RISC-V/assets/59409568/3992333b-027d-46b4-addf-c420e26fc858)
+
+
  
 </details>
 
