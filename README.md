@@ -113,9 +113,27 @@ return 0;
 
 - To **debug** the code.
 
+```bash
+/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/spike -d pk sum1toN.o
+(spike) until pc 0 101aa
+bbl loader
+(spike) 
+core   0: 0x00000000000101aa (0x03200793) li      a5, 50
+(spike) reg 0 a5
+0x0000000000000032
+(spike) 
+core   0: 0x00000000000101ae (0xfef42223) sw      a5, -28(s0)
+
+```
+![Screenshot from 2023-08-21 14-37-32](https://github.com/Shant1R/RISC-V/assets/59409568/e9e58ccf-972d-4361-8a16-9805eea676ab)
+
+
 
 - To **exit** the debugger.
 
+```bash
+(spike) q
+```
  
 </details>
 
