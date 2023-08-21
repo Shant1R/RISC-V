@@ -299,6 +299,10 @@ ld x8,16(x23)
 ```
 ![Screenshot from 2023-08-21 16-23-55](https://github.com/Shant1R/RISC-V/assets/59409568/6a153963-21cb-4be2-8e4f-9910c4a7d081)
 
+- The opcode for ld is defined in opcode and funct3.
+- rd defines the destination registor
+- rs1 points to the memory location for loading.
+- immediate gives the exact memory location for loading by adding it to the rs1 value.
 
 ***Operation add***
 
