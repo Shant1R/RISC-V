@@ -534,6 +534,20 @@ Under this section, we will look into the implementation of sequential logic cir
 
 <details>
 <summary><strong>Pipelined Logic</strong></summary>
+
+Pipelining is a technique used in digital design and computer architecture to improve the efficiency and performance of processing by breaking down a task into smaller stages that can be executed concurrently. Here are some of the benefits of pipelining -
+- Increased throughput
+- Reduced latency
+- Better resource utilization
+- Improved parallelism
+- Smoother performance
+- Scalability
+- Faster clock speeds
+- Reduced dependencies
+- Flexibility
+- Efficient resource sharing
+
+Pipelining or timing abstract is an important feature in TL verilog as it can be implemented very easily with fewer codes as compared to system verilog which reduces bugs to a great extent. An example of the pipeling for pythogoras theorem using both TL verilog and system verilog in this repo . In TL verilog pipeling can be implemented by defining the pipeline as |calc and the different pipeline stages should be properly align and are indicated by @1, @2 and so on.
  
 </details>
 
