@@ -598,14 +598,19 @@ $reset = *reset;
 
 ![Screenshot from 2023-08-21 23-58-16](https://github.com/Shant1R/RISC-V/assets/59409568/99bb5b8d-3a96-4e1f-8191-e0ca11c56471)
 
-
- 
 </details>
 
 
 
 <details>
 <summary><strong>Validity</strong></summary>
+
+Validity is another feature in TL verilog which is asserted if a particular transactions in a pipeline is valid or true. A new scope, called “when” scope is introduced for this and it is denoted as ?$valid. This new scope has many advantages - easier design, cleaner debug, better error checking and automated clock gating. Validity provides :
+
+- Easier debug
+- Cleaner design
+- Better error checking
+- Automated Clock gating
  
 </details>
 
