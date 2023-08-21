@@ -286,8 +286,8 @@ To have a better understanding, we need to have an insight into the memory and s
 
 ![Screenshot from 2023-08-21 16-00-23](https://github.com/Shant1R/RISC-V/assets/59409568/9c44636f-01f9-42b0-b6d2-40a64981b9f5)
 
-- First, one can directly store the data into the registors, The second being via memory.
-- The data is split into 8 parts of each being 8 bits, ie double-words each. Then the most significant byte is stored in the little endian procedure. 
+- First, one can directly loaded into the data into the registors, The second being via memory.
+- The data is split into 8 parts of each being 8 bits, ie double-words each. Then the most significant byte is loaded into the little endian procedure and so forth. 
  
 </details>
 
