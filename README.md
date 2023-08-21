@@ -548,6 +548,12 @@ Pipelining is a technique used in digital design and computer architecture to im
 - Efficient resource sharing
 
 Pipelining or timing abstract is an important feature in TL verilog as it can be implemented very easily with fewer codes as compared to system verilog which reduces bugs to a great extent. An example of the pipeling for pythogoras theorem using both TL verilog and system verilog in this repo . In TL verilog pipeling can be implemented by defining the pipeline as |calc and the different pipeline stages should be properly align and are indicated by @1, @2 and so on.
+
+***Pipelined Pythegorean Imoplementation***
+
+![Screenshot from 2023-08-21 22-46-05](https://github.com/Shant1R/RISC-V/assets/59409568/b42db4a1-f350-41c2-8f43-4bb01f5aa242)
+
+
  
 </details>
 
