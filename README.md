@@ -435,8 +435,9 @@ Under this section, we are going to look into:
 We will be using TLverilog which is an extension of verilog and Makerchip IDE to visualise the design.
 
 ***Logic Gates***
-- Logic gates are fundamental building blocks of digital circuits. They are electronic devices that perform basic logical operations on one or more binary inputs (usually 0 or 1) to produce a single binary output. These gates are the foundation of all digital systems, including computers, microcontrollers, and other digital devices. Logic gates are typically implemented using electronic components such as transistors.
-- The most common logic gates are:
+ Logic gates are fundamental building blocks of digital circuits. They are electronic devices that perform basic logical operations on one or more binary inputs (usually 0 or 1) to produce a single binary output. These gates are the foundation of all digital systems, including computers, microcontrollers, and other digital devices. Logic gates are typically implemented using electronic components such as transistors.
+
+The most common logic gates are:
 1. NOT
 2. AND
 3. OR
