@@ -112,6 +112,15 @@ return 0;
 
 ![Screenshot from 2023-08-20 23-05-37](https://github.com/Shant1R/RISC-V/assets/59409568/83cce545-97dc-475c-bdf6-daf938228842)
 
+- Introducting spike debugger. It helps to check upon the data stored at a location before and after the statement execution. It also provides a proper output similar to incase of using gcc compiler.
+
+```bash
+./riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/spike pk sum1toN.o
+```
+
+![Screenshot from 2023-08-21 14-12-31](https://github.com/Shant1R/RISC-V/assets/59409568/edebc8cc-5916-4b2f-9eb7-2645f61b26b2)
+
+
  
 </details>
 
