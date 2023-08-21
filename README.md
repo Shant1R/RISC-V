@@ -325,6 +325,18 @@ sd x8,8(x23)
 - The opcode for ld is defined in opcode and funct3.
 - rs1 and rs2 are the two source registers.
 - immediate ie offset is split into two parts.
+
+*NOTE* -- we see that all the source and destination registers are defined using 5 bits, thus only 32 unique locations can be stored, hence the reason why RISC-V has 32 registers for design.
+
+It uses different registers(32 in number) which are each of width of 32 bit for RV32 ( and widht of for RV64) . For base integer instructions there are broadly 3 types of of such registers:
+
+ - I-type : For instructions having immediate values as operands.
+ - R-type : For instructions having only registers as operands.
+ - S-type : For instructions used for storing operations.
+
+![Screenshot from 2023-08-21 16-39-14](https://github.com/Shant1R/RISC-V/assets/59409568/d24a5248-2f46-478d-92b7-8319fa9945ed)
+
+- The table summaries how the RISC-V architecture defines the 32 registers for different usages and there ABI names.
  
 </details>
 
