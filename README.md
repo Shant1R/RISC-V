@@ -665,10 +665,37 @@ Under this lab work we design a 2-cycle calculator along with the validity funct
 - Code on TLverilog
 
 ```bash
-BKL
+|calc
+      
+      @0
+         $reset = *reset;
+      @1
+         $val1[31:0] = >>2$out[31:0];
+         $val2[31:0] = $rand2[3:0];
+         
+         $valid = $reset ? 1'b0 : >>1$valid + 1'b1;
+         $valid_or_reset = $valid || $reset;
+
+      ?$valid_or_reset   
+         @1
+
+
+            $sum[31:0] = $val1+$val2;
+            $dif[31:0] = $val1-$val2;
+            $mul[31:0] = $val1*$val2;
+            $div[31:0] = $val1/$val2;
+            
+
+         @2
+            $out[31:0] = ($reset)? 1 :($op[1] ? ($op[0] ? $div : $mul):($op[0] ? $dif : $sum));
+
+          
 ```
 
 - Implementation on Makerchip IDE.
+
+![Screenshot from 2023-08-22 01-07-09](https://github.com/Shant1R/RISC-V/assets/59409568/926c455d-22a9-40f3-847d-e8381e84addf)
+
 
 
 
