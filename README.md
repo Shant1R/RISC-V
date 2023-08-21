@@ -452,6 +452,10 @@ The most common logic gates are:
 ![Screenshot from 2023-08-21 18-36-15](https://github.com/Shant1R/RISC-V/assets/59409568/0f002dc6-0c39-4f84-9d37-ec7de1538296)
 
 - The images shows the various syntax for the logic gates. Our main focus will be on verilog.
+
+
+***Introduction to Makerchip***[link](https://makerchip.com/)
+
       
 </details>
 
@@ -500,6 +504,7 @@ The most common logic gates are:
 - https://github.com/stevehoover/RISC-V_MYTH_Workshop
 - https://www.vsdiat.com/
 - https://redwoodeda.com/
+- https://makerchip.com/
 - https://github.com/riscv/riscv-gnu-toolchain
 - https://github.com/alwinshaju08/RISCV
 - https://github.com/mrdunker/RISC-V_based_MYTH_IIITB
