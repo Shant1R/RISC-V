@@ -501,6 +501,13 @@ Under this section, we will go over a few lab examples using Makerchip to have a
 
 <details>
 <summary><strong>Sequential Logic</strong></summary>
+
+Under this section, we will look into the implementation of sequential logic circuits on Makerchip IDE. Sequential logic integrates a clock that defines the flow and transition of data. The cicuit also integrates a reset which upon activation will reset the output to a pre-defined value. The most common flipflop used is D flip flop.
+
+- The circuits can be refered as a state machine as well, the flops are followed by the combinational logic.
+
+![Screenshot from 2023-08-21 19-54-30](https://github.com/Shant1R/RISC-V/assets/59409568/29c9037d-e4a3-446c-92b9-8003b9fb8514)
+
  
 </details>
 
