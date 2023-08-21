@@ -564,6 +564,8 @@ Pipelining or timing abstract is an important feature in TL verilog as it can be
 
 ![Screenshot from 2023-08-21 23-27-31](https://github.com/Shant1R/RISC-V/assets/59409568/3992333b-027d-46b4-addf-c420e26fc858)
 
+***2-Cycle Calculator***
+
 
  
 </details>
