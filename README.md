@@ -709,8 +709,42 @@ Under this lab work, we design a calculator with a memory component.
 
 - Code on TLverilog
 
+```bash
+|calc
+      @0
+         $reset = *reset;
+         
+      @1
+         $val1 [31:0] = >>2$out[31:0];
+         $val2 [31:0] = $rand1[3:0];
+         
+         $valid = $reset ? 1'b0 : >>1$valid + 1'b1 ;
+         $valid_or_reset = $valid || $reset;
+         
+      ?$vaild_or_reset
+         @1   
+            $sum[31:0] = $val1 + $val2;
+            $dif[31:0] = $val1 - $val2;
+            $mul[31:0] = $val1 * $val2;
+            $div[31:0] = $val1 / $val2;
+            
+         @2   
+            $mem[31:0] = $reset ? 32'b0 :
+                         ($op[2:0] == 3'b101) ? $val1 : >>2$mem ;
+            
+            $out [31:0] = $reset ? '1 :
+                          ($op[2:0] == 3'b000) ? $sum :
+                          ($op[2:0] == 3'b001) ? $dif :
+                          ($op[2:0] == 3'b010) ? $mul :
+                          ($op[2:0] == 3'b011) ? $div :
+                          ($op[2:0] == 3'b100) ? >>2$mem : >>2$out ;
+            
+            
+```
+
 - Implementation on Makerchip IDE.
 
+![Screenshot from 2023-08-22 01-30-04](https://github.com/Shant1R/RISC-V/assets/59409568/c150a79a-19f3-4af2-b1f8-ecf6702a27a5)
 
 
 </details>
