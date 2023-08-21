@@ -445,7 +445,10 @@ The most common logic gates are:
 5. NOR
 6. XOR
 7. XNOR
- 
+
+![Screenshot from 2023-08-21 18-30-47](https://github.com/Shant1R/RISC-V/assets/59409568/04d63592-d329-460c-8a97-856ca4be33db)
+- The image provides the truth tables for the various logic gates along with logic diagrams.
+   
 </details>
 
 
