@@ -653,6 +653,11 @@ Thus, in TLverilog, we don't have to look into clock gating individually. It get
 
 ![Screenshot from 2023-08-22 00-42-40](https://github.com/Shant1R/RISC-V/assets/59409568/8d5a2474-a29c-4ef6-8af0-c368fae02458)
 
+
+***2-Cycle Calculator with Validity***
+
+***Calculator with Single-value Memory***
+
 </details>
 
 
