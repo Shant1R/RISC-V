@@ -611,6 +611,12 @@ Validity is another feature in TL verilog which is asserted if a particular tran
 - Cleaner design
 - Better error checking
 - Automated Clock gating
+
+**Clock Gating**
+- Clock signals are distributed to EVERY flip-flop.
+- Clocks toggle twice per cycle. This consumes power.
+- Clock gating avoids toggling clock signals.
+- TL-Verilog can produce fine-grained gating (or enables).
  
 </details>
 
