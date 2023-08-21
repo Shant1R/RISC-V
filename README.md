@@ -217,11 +217,40 @@ long long int max = (long long int) (pow(2,10) * -1);
 ![Screenshot from 2023-08-21 15-05-49](https://github.com/Shant1R/RISC-V/assets/59409568/14d1fbb6-486a-447f-bc28-1de932b37240)
 
 
-
- 
-
-
 ***Lab 2***
+
+- Under this lab, we have been provided with the code to find the highest and lowest of the 64 bit signed numbers.
+- Code for signed.c
+
+```bash
+#include <stdio.h>
+#include <math.h>
+int main() {
+long long int max = (int) (pow(2,63) -1);
+long long int min = (int) (pow(2,63) * -1);
+printf("highest number represented by long long int is %lld\n", max);
+printf("lowest number represented by long long int is %lld\n", min);
+return 0;
+```
+
+- This gives incorrerct output for the values. We rectify the error and execute using RISC-V compiler.
+- Debugged Code for signed.c
+
+
+```bash
+#include <stdio.h>
+#include <math.h>
+int main() {
+long long int max = (long long int) (pow(2,63) -1);
+long long int min = (long long int) (pow(2,63) * -1);
+printf("highest number represented by long long int is %lld\n", max);
+printf("lowest number represented by long long int is %lld\n", min);
+return 0;
+```
+  
+
+![Screenshot from 2023-08-21 15-11-37](https://github.com/Shant1R/RISC-V/assets/59409568/87cba4d0-4842-46dd-a28d-31f2dbe11920)
+
  
 </details>
 
