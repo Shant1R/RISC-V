@@ -251,6 +251,10 @@ return 0;
 
 ![Screenshot from 2023-08-21 15-11-37](https://github.com/Shant1R/RISC-V/assets/59409568/87cba4d0-4842-46dd-a28d-31f2dbe11920)
 
+Table for memory size along with the format specifier for various data types.
+
+![Screenshot from 2023-08-21 15-13-33](https://github.com/Shant1R/RISC-V/assets/59409568/7aab2123-77f1-4e48-8631-c78a93da9ce3)
+
  
 </details>
 
