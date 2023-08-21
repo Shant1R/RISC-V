@@ -134,6 +134,8 @@ core   0: 0x00000000000101ae (0xfef42223) sw      a5, -28(s0)
 ```bash
 (spike) q
 ```
+![Screenshot from 2023-08-21 14-37-35](https://github.com/Shant1R/RISC-V/assets/59409568/e3ba0032-4985-4270-8cd0-93639e9043fe)
+
  
 </details>
 
