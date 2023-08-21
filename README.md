@@ -406,6 +406,16 @@ riscv64-unknown-elf-objdump -d custom1to10.o  | less
 
 <details>
 <summary><strong>Verification FLow using iverilog</strong></summary>
+
+Under the previous section, we saw how to run a C program and the assembly level program and called it back to the main C program. This was simualtion based experiments. We will now see how to run the same C program on a RISC-V based architecture.
+
+![Screenshot from 2023-08-21 18-00-13](https://github.com/Shant1R/RISC-V/assets/59409568/ce29a725-0b84-4e8b-baa7-5d532943796a)
+
+- The image describes the flow for the operations.
+- We have riscv cpu program code through which we send the HEX format file of c program to show output the output of the given code.
+
+
+  
  
 </details>
 
