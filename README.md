@@ -495,4 +495,13 @@ The most common logic gates are:
  
 ## DAY 5 - Complete Pipelined RISC-V CPU Micro-Architecture
 
+## References
+- https://github.com/kunalg123
+- https://github.com/stevehoover/RISC-V_MYTH_Workshop
+- https://www.vsdiat.com/
+- https://redwoodeda.com/
+- https://github.com/riscv/riscv-gnu-toolchain
+- https://github.com/alwinshaju08/RISCV
+- https://github.com/mrdunker/RISC-V_based_MYTH_IIITB
+
 
