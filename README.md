@@ -393,6 +393,12 @@ riscv64-unknown-elf-gcc -ofast -o custom1to10.o custom1to10.c load.S
 riscv64-unknown-elf-objdump -d custom1to10.o  | less
 ```
 
+- Output on the terminal
+
+![Screenshot from 2023-08-21 17-46-37](https://github.com/Shant1R/RISC-V/assets/59409568/21aae137-27d9-45f3-82de-7866b7a767fe)
+
+- Instruction set generated under ABI.
+   
 ![Screenshot from 2023-08-21 17-44-46](https://github.com/Shant1R/RISC-V/assets/59409568/2b040457-d5dc-4e22-a4cd-385940056f59)
 
  
