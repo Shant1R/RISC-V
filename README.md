@@ -97,22 +97,13 @@ return 0;
 ```
 - The first commmand line generates the ISA file and the second command gives a detailed insight.
 - It can be calculated using the memory locations, how many instructions are given. For this example, we can verify by counting.
-- We have total 15 instructions.
+- We have total 36 instructions.
 
-![Screenshot from 2023-08-20 22-57-22](https://github.com/Shant1R/RISC-V/assets/59409568/29c24604-557c-4e5a-93bc-a2c5ce11dcb0)
+![Screenshot from 2023-08-21 14-32-16](https://github.com/Shant1R/RISC-V/assets/59409568/6223591e-74cd-4fd4-9d16-d6a2dc7929bb)
 
-- Now we run the RISC-V complier again with a different instructtion. *-Ofast* in place of *-O1*.
-
-```bash
-/home/shant/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1toN.o sum1toN.c
-/home/shant/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-objdump -d sum1toN.o | less
-```
-
-- We can observe that the number of instrucions have reduced to 10 from 15.
-
-![Screenshot from 2023-08-20 23-05-37](https://github.com/Shant1R/RISC-V/assets/59409568/83cce545-97dc-475c-bdf6-daf938228842)
 
 - Introducting ***spike*** debugger. It helps to check upon the data stored at a location before and after the statement execution. It also provides a proper output similar to incase of using gcc compiler.
+- To **compile** the Code 
 
 ```bash
 ./riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/spike pk sum1toN.o
@@ -120,6 +111,10 @@ return 0;
 
 ![Screenshot from 2023-08-21 14-12-31](https://github.com/Shant1R/RISC-V/assets/59409568/edebc8cc-5916-4b2f-9eb7-2645f61b26b2)
 
+- To **debug** the code.
+
+
+- To **exit** the debugger.
 
  
 </details>
