@@ -787,8 +787,52 @@ The Game of Life takes place on an infinite grid of cells, each of which can be 
 
 
 ## DAY 4 - Basic RISC-V CPU Micro-Architecture
+
+<details>
+
+<summary><strong>Introduction to Simple RISC Micro-Architecture</strong></summary>
+ 
+</details>
+
+
+<details>
+
+<summary><strong>Fetch and Decode</strong></summary>
+ 
+</details>
+
+
+<details>
+
+<summary><strong>RISC-V Logic Control</strong></summary>
+ 
+</details>
+
+
  
 ## DAY 5 - Complete Pipelined RISC-V CPU Micro-Architecture
+
+<details>
+	
+<summary><strong>Pipelining the CPU</strong></summary>
+ 
+</details>
+
+<details>
+	
+<summary><strong>Solutions to Pipelining Hazards</strong></summary>
+ 
+</details>
+
+
+<details>
+	
+<summary><strong>Load/Store Instructions and Completing the CPU</strong></summary>
+ 
+</details>
+
+
+
 
 ## References
 - https://github.com/kunalg123
