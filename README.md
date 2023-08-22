@@ -967,6 +967,17 @@ m4+cpu_viz(@4)
 - Implementation of Fetch Logic on Makerchip along with Diagram and Visualisation.
 
 ![Screenshot from 2023-08-22 13-07-47](https://github.com/Shant1R/RISC-V/assets/59409568/7dcdbd46-e28e-4ac3-8ff1-e2b166d68956)
+
+- The current implementations have errors such as the variables are not being used.
+- Fetch Logic to be implemented
+
+![Screenshot from 2023-08-22 13-07-47](https://github.com/Shant1R/RISC-V/assets/59409568/c0e4554e-bf92-4b67-8d84-2ed725da2ed6)
+
+
+- Final implementation of Fetch Logic
+
+![Screenshot from 2023-08-22 13-07-47](https://github.com/Shant1R/RISC-V/assets/59409568/fbbf3d3a-32f1-4c8b-bcbc-277afbe1dca8)
+
  
 </details>
 
