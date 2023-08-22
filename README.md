@@ -913,7 +913,7 @@ We will follow a test driven development, ie. develop first and then test functi
 
 Under this section, we will follow up on implementatin of various constituents of the RISC-V CPU in the same order as shown in previous section. We have the framework and template from the previous section.
 
-### PC Logic Implementation
+### *PC Logic Implementation*
 
 In RISC-V, the Program Counter (PC) is a special-purpose register that holds the memory address of the next instruction to be fetched and executed. The PC is also commonly referred to as the instruction pointer (IP) in other architectures. The PC is a crucial component of the processor's control flow, as it determines the sequence of instructions that are fetched and executed.
  
