@@ -791,7 +791,29 @@ The Game of Life takes place on an infinite grid of cells, each of which can be 
 <details>
 
 <summary><strong>Introduction to Simple RISC Micro-Architecture</strong></summary>
- 
+
+Microarchitecture refers to the internal design and organization of a CPU that implements a particular ISA. RISC-V CPUs can have different microarchitectures that optimize for various aspects such as performance, power efficiency, and area (size of the chip). Here are some key features and concepts commonly found in RISC-V microarchitecture:
+
+1. Instruction Fetch (IF)
+2. Instruction Decode (ID)
+3. Execution Units
+
+It's important to note that RISC-V is an instruction set architecture, and microarchitectures based on RISC-V can vary widely depending on the design goals of the processor manufacturer. Different companies and research institutions may develop their own microarchitectures that implement the RISC-V ISA in unique ways, tailored to specific use cases and performance goals.
+
+Here we are designing the basic processor of 3 stages fetch, decode and execute based on RISC-V ISA.
+For starting the implementation a starter code is present in the below link.
+
+- The block diagram of a basic RISC-V microarchitecture
+
+![Screenshot from 2023-08-22 11-58-21](https://github.com/Shant1R/RISC-V/assets/59409568/641bc6dc-3280-43b6-b245-8f25811ef2d9)
+
+Using the Makerchip platform the implementation of the RISC-V microarchitecture or core is done. For starting the implementation a starter code present here is used. The starter code shell consists of:
+
+- RISC-V Assembler
+- Test program
+- Visualization(Viz)
+- Commented code for register, file and memory.
+
 </details>
 
 
