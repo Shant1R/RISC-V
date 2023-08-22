@@ -801,7 +801,11 @@ Microarchitecture refers to the internal design and organization of a CPU that i
 It's important to note that RISC-V is an instruction set architecture, and microarchitectures based on RISC-V can vary widely depending on the design goals of the processor manufacturer. Different companies and research institutions may develop their own microarchitectures that implement the RISC-V ISA in unique ways, tailored to specific use cases and performance goals.
 
 Here we are designing the basic processor of 3 stages fetch, decode and execute based on RISC-V ISA.
-For starting the implementation a starter code is present in the below link.
+For starting the implementation a starter code is present in the github repository provided.
+
+```bash
+ https://github.com/stevehoover/RISC-V_MYTH_Workshop
+```
 
 - The block diagram of a basic RISC-V microarchitecture
 
