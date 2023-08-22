@@ -772,8 +772,15 @@ The Game of Life takes place on an infinite grid of cells, each of which can be 
 
 ![Screenshot from 2023-08-22 11-35-34](https://github.com/Shant1R/RISC-V/assets/59409568/10d468e4-0c19-4200-9f4f-a68aca31bab1)
 
+***Pythagorean Theoram Implementation using Makerchip IDE***
 
+- Pipelined Logic Diagram
 
+![Screenshot from 2023-08-22 11-40-56](https://github.com/Shant1R/RISC-V/assets/59409568/6256f2bc-f03b-4475-99ad-2ad55fb1a1c2)
+
+- Implementation on Makerchip IDE
+
+![Screenshot from 2023-08-22 11-38-48](https://github.com/Shant1R/RISC-V/assets/59409568/0679499c-bdb4-45aa-b715-f151d2902aad)
 
 </details>
 
