@@ -916,6 +916,28 @@ Under this section, we will follow up on implementatin of various constituents o
 ### *PC Logic Implementation*
 
 In RISC-V, the Program Counter (PC) is a special-purpose register that holds the memory address of the next instruction to be fetched and executed. The PC is also commonly referred to as the instruction pointer (IP) in other architectures. The PC is a crucial component of the processor's control flow, as it determines the sequence of instructions that are fetched and executed.
+
+- Logic Diagram for PC
+
+![Screenshot from 2023-08-22 12-52-43](https://github.com/Shant1R/RISC-V/assets/59409568/76b4c899-5bdf-4740-a2f0-a16c90be44a7)
+
+- 32 bit PC has to be reset to 0 is the previous instruction was reset
+- The PC increment has to be done with steps of each instruction, ie, 32'b4 increment needed.
+- TLverilog code implementation for the same
+
+```bash
+|cpu
+      @0
+         $reset = *reset;
+         $pc[31:0] = >>1$reset ? 32'b0 : >>1$pc + 32'd4;
+         
+```
+
+- Implementation on Makerchip IDE.
+
+![Screenshot from 2023-08-22 12-57-53](https://github.com/Shant1R/RISC-V/assets/59409568/01184c14-def1-44a1-8ce3-2d7b30f0511d)
+
+  
  
 </details>
 
