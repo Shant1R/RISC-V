@@ -1110,6 +1110,78 @@ $imm[31:0] = $is_i_instr ? {{21{$instr[31]}}, $instr[30:20]} :
 <details>
 
 <summary><strong>RISC-V Logic Control</strong></summary>
+
+Under this section, we will look into the implementation of RISC-V CPU from register file read onwards.
+
+### *Register File Read Implementation*
+
+- Pipelined Logic diagram for implementation.
+
+![Screenshot from 2023-08-22 18-38-07](https://github.com/Shant1R/RISC-V/assets/59409568/38195cad-4d4c-4fc3-9b9a-55c25dc6c97c)
+
+- Structure of the register design for implementation. Two read operations and one write operation to be performed. 
+
+![Screenshot from 2023-08-22 18-39-43](https://github.com/Shant1R/RISC-V/assets/59409568/cc61223b-3aec-44e7-8ff6-7b974d2741ce)
+
+- Code for implementation.
+
+```bash
+	 $rf_wr_en = 1'b0;
+         $rf_wr_index[4:0] = 5'b0;
+         $rf_wr_data[31:0] = 32'b0;
+         $rf_rd_en1 = $rs1_valid;
+         $rf_rd_en2 = $rs2_valid;
+         
+         $rf_rd_index1[4:0] = $rs1;
+         $rf_rd_index2[4:0] = $rs2;
+
+```
+
+- Now, we have read the register files, we will connect up the values we have read to the signals we will send to the ALU.
+- Code for connection.
+
+```bash
+	 $src1_value[31:0] = $rf_rd_data1;
+         $src2_value[31:0] = $rf_rd_data2;
+
+```
+
+### *ALU Implementation*
+
+We move to the next stage of implementation, ie. ALU. The logic diagram.
+
+![Screenshot from 2023-08-22 19-01-44](https://github.com/Shant1R/RISC-V/assets/59409568/df1fbd0f-a0aa-4491-b71c-4aabd08bd1ef)
+
+- Under this, we implement the arithmatic and logic functionalities of the ALU. Code for the same are as follows.
+
+```bash
+	$result[31:0] = $is_addi ? $src1_value + $imm :
+			$is_add ? $src1_value + $src2_value :
+			32'bx ;
+```
+- Implementation upto ALU on Makerchip IDE
+
+![Screenshot from 2023-08-22 19-12-16](https://github.com/Shant1R/RISC-V/assets/59409568/10c8a83f-7b9d-4af8-989e-362cfd2b0909)
+
+### *Register File Write Implementation*
+
+Under this we go over the implementation of Write funcction after the ALU has performed.
+
+- Logic Diagram
+
+![Screenshot from 2023-08-22 19-14-10](https://github.com/Shant1R/RISC-V/assets/59409568/904fcddc-9014-4c93-a152-5f5389b1ab5d)
+
+- Code for writing register file.
+
+```bash
+	$rf_wr_en = $rd_valid && $rd != 5'b0;
+	$rf_wr_index[4:0] = $rd;
+	$rf_wr_data[31:0] = $result;
+```
+- Implementation on Makerchip IDE.
+
+![Screenshot from 2023-08-22 19-22-08](https://github.com/Shant1R/RISC-V/assets/59409568/611dd652-bf42-4a51-8487-cfd6e33f0987)
+
  
 </details>
 
