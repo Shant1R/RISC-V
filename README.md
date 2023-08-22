@@ -937,7 +937,34 @@ In RISC-V, the Program Counter (PC) is a special-purpose register that holds the
 
 ![Screenshot from 2023-08-22 12-57-53](https://github.com/Shant1R/RISC-V/assets/59409568/01184c14-def1-44a1-8ce3-2d7b30f0511d)
 
-  
+### *Fetch Logic Implementation*
+
+During the fetch stage, processors fetches the instruction from the memory to the address pointed by the program counter. The program counters holds the address of the next stage, in our case it is after 4 cycle and the instruction memory holds the set of instruction to be executed.
+
+- Logic Diagram for Fetch
+
+![Screenshot from 2023-08-22 13-03-41](https://github.com/Shant1R/RISC-V/assets/59409568/2e9451f1-ac14-4e8f-9acd-d38f899cc3db)
+
+- TLverilog code for implementation
+
+```bash
+|cpu
+      @0
+         $reset = *reset;
+         $pc[31:0] = >>1$reset ? 32'b0 : >>1$pc + 32'd4;
+
+// Assert these to end simulation (before Makerchip cycle limit).
+*passed = *cyc_cnt > 40;
+*failed = 1'b0;
+
+|cpu
+      m4+imem(@1)    // Args: (read stage)
+
+m4+cpu_viz(@4)
+
+```
+
+- 
  
 </details>
 
