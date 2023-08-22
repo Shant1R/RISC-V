@@ -1182,6 +1182,73 @@ Under this we go over the implementation of Write funcction after the ALU has pe
 
 ![Screenshot from 2023-08-22 19-22-08](https://github.com/Shant1R/RISC-V/assets/59409568/611dd652-bf42-4a51-8487-cfd6e33f0987)
 
+
+***Note-->*** We will look into arrays under RISC-V. 
+- Arrays are collection of data of same datatypes.
+- RISC-V processors support arrays through their memory access instructions and addressing modes. In the RISC-V architecture, arrays are commonly managed using a combination of memory locations and registers.
+- Arrays are represented as contiguous blocks of memory in RISC-V.
+- Pointers are used to track the memory address where the array starts.
+- Arrays are accessed using pointers and offsets calculated from the index and element size.
+- Load and store instructions are used to manipulate array elements.
+- Pointer arithmetic involves adding offsets to pointers for accessing different elements.
+- Pointers are initialized with the memory address of the array's first element.
+- Array operations are performed through load-store instructions and pointer manipulation.
+
+![Screenshot from 2023-08-22 19-33-44](https://github.com/Shant1R/RISC-V/assets/59409568/11833798-81ea-46a7-aa81-53a87d1b4870)
+
+### *Branch Instructions Implementation*
+
+We will look into the implementations for the various branch instructions, we have decoded earlier.
+
+- Logic Diagram
+
+![Screenshot from 2023-08-22 19-44-10](https://github.com/Shant1R/RISC-V/assets/59409568/8991e1fa-f8ce-43e5-9675-2c8bb0c60875)
+
+- All *instr* with **B** initials are branch statements. Logic for the branches are as follows.
+
+![Screenshot from 2023-08-22 19-48-40](https://github.com/Shant1R/RISC-V/assets/59409568/ea7c1946-da5f-4089-ae27-98e897cb3c69)
+
+-Code for implementing when to take a branch.
+
+```bash
+$taken_branch = $is_beq ? ($src1_value == $src2_value):
+		$is_bne ? ($src1_value != $src2_value):
+		$is_blt ? (($src1_value < $src2_value) ^ ($src1_value[31] != $src2_value[31])):
+		$is_bge ? (($src1_value >= $src2_value) ^ ($src1_value[31] != $src2_value[31])):
+		$is_bltu ? ($src1_value < $src2_value):
+		$is_bgeu ? ($src1_value >= $src2_value):
+		1'b0;
+```
+
+- Now, we will look into how to figure out where to branch to.
+- Code to determine the path to Branch to
+
+```bash
+$br_target_pc[31:0] = $pc + $imm;
+```
+
+- Makerchip IDE after implementation for branch instructions.
+
+![Screenshot from 2023-08-22 20-05-14](https://github.com/Shant1R/RISC-V/assets/59409568/c83cc071-b5fb-4cc0-a849-e8e82d508d42)
+
+### *Creating Testbench*
+
+We will now look into how to create a testbench for the functionality of the constructed RISC-V CPU.
+
+- Code for testbench
+
+```bash
+*passed = |cpu/xreg[10]>>5$value == (1+2+3+4+5+6+7+8+9) ;
+
+```
+
+- Implementation of the Testbench on Makerchip IDE
+
+  ![Screenshot from 2023-08-22 20-13-27](https://github.com/Shant1R/RISC-V/assets/59409568/c4c071c7-8477-44f8-891e-4853832f6053)
+
+
+
+
  
 </details>
 
