@@ -898,6 +898,11 @@ We will follow a test driven development, ie. develop first and then test functi
 
 - URL to my design -> [Link](https://makerchip.com/sandbox/0PNf4hzOP/0Y6hw0)
 
+- Logic Diagram for the RISC-V CPU we will be designing
+
+![Screenshot from 2023-08-22 12-38-42](https://github.com/Shant1R/RISC-V/assets/59409568/d146c473-d12f-4fc5-a4a1-0d7ae6505589)
+
+  
 
 </details>
 
