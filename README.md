@@ -964,7 +964,9 @@ m4+cpu_viz(@4)
 
 ```
 
-- 
+- Implementation of Fetch Logic on Makerchip along with Diagram and Visualisation.
+
+![Screenshot from 2023-08-22 13-07-47](https://github.com/Shant1R/RISC-V/assets/59409568/7dcdbd46-e28e-4ac3-8ff1-e2b166d68956)
  
 </details>
 
