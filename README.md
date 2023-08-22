@@ -902,7 +902,7 @@ We will follow a test driven development, ie. develop first and then test functi
 
 ![Screenshot from 2023-08-22 12-38-42](https://github.com/Shant1R/RISC-V/assets/59409568/d146c473-d12f-4fc5-a4a1-0d7ae6505589)
 
-  
+- We will start implementing the said logic structure in Makerchip IDE and follow a sequence. As noticed, we have marked the various components as 1,2,...,7, thus in the same order we would follow up the implementation.
 
 </details>
 
@@ -910,6 +910,12 @@ We will follow a test driven development, ie. develop first and then test functi
 <details>
 
 <summary><strong>Fetch and Decode</strong></summary>
+
+Under this section, we will follow up on implementatin of various constituents of the RISC-V CPU in the same order as shown in previous section. We have the framework and template from the previous section.
+
+# PC Logic Implementation
+
+In RISC-V, the Program Counter (PC) is a special-purpose register that holds the memory address of the next instruction to be fetched and executed. The PC is also commonly referred to as the instruction pointer (IP) in other architectures. The PC is a crucial component of the processor's control flow, as it determines the sequence of instructions that are fetched and executed.
  
 </details>
 
