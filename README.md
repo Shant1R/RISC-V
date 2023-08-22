@@ -971,16 +971,141 @@ m4+cpu_viz(@4)
 - The current implementations have errors such as the variables are not being used.
 - Fetch Logic to be implemented
 
-![Screenshot from 2023-08-22 13-07-47](https://github.com/Shant1R/RISC-V/assets/59409568/c0e4554e-bf92-4b67-8d84-2ed725da2ed6)
+![Screenshot from 2023-08-22 16-36-44](https://github.com/Shant1R/RISC-V/assets/59409568/24ed710d-0ae1-4049-aa73-c89d20083451)
 
+- Code
+```bash
+@0
+         $reset = *reset;
+         $pc[31:0] = >>1$reset ? 32'b0 : >>1$pc + 32'd4;
+      @1
+         $imem_rd_addr[M4_IMEM_INDEX_CNT-1:0] = $pc[M4_IMEM_INDEX_CNT+1:2];
+         $imem_rd_en = !$reset;
+         $instr[31:0] = $imem_rd_data[31:0];
+      
+      ?$imem_rd_en
+         @1
+            $imem_rd_data[31:0] = /imem[$imem_rd_addr]$instr;
+```
 
 - Final implementation of Fetch Logic
 
 ![Screenshot from 2023-08-22 13-07-47](https://github.com/Shant1R/RISC-V/assets/59409568/fbbf3d3a-32f1-4c8b-bcbc-277afbe1dca8)
 
+### *Decode Logic Implementation*
+
+Under this section, we look into how to decode the instruction code we fetched from memory.
+
+- Logic Diagram for Decode stage.
+
+![Screenshot from 2023-08-22 16-57-28](https://github.com/Shant1R/RISC-V/assets/59409568/32808fe5-954d-457c-a172-33a7e3257926)
+
+Before moving on to Decode logic implementation, it is important to understand how the instruction set and opcode are defined in RISC-V. We have dicussed before the different types of the instruction types. The various types of instrutcion types are summarised in the table along with the binary code. There are 6 instructions type in RISC-V :
+
+1. Register (R) type
+2. Immediate (I) type
+3. Store (S) type
+4. Branch (B) type
+5. Upper immediate (U) type
+6. Jump (J) type
+
+![Screenshot from 2023-08-22 16-45-15](https://github.com/Shant1R/RISC-V/assets/59409568/b28d2c5f-ca84-4a0b-a3b3-1e00c408b3d6)
+
+- Code to determine the type of instruction fetched-
+
+```bash
+@1
+         $is_i_instr = $instr[6:2] ==? 5'b0000x || 
+                       $instr[6:2] ==? 5'b001x0 || 
+                       $instr[6:2] == 5'b11001;
+         $is_r_instr = $instr[6:2] ==? 5'b011x0 || 
+                       $instr[6:2] == 5'b01011 || 
+                       $instr[6:2] == 5'b10100;
+         $is_s_instr = $instr[6:2] ==? 5'b0100x;
+         $is_b_instr = $instr[6:2] ==? 5'b11000;
+         $is_j_instr = $instr[6:2] ==? 5'b11011;
+         $is_u_instr = $instr[6:2] ==? 5'b0x101;
+```
+
+- Now we look into how to determine the immediate field from the instruction fetched.
+
+- The table explains the contruct of the *imm* using the various immediate bits from *instr*.
+
+![Screenshot from 2023-08-22 17-34-40](https://github.com/Shant1R/RISC-V/assets/59409568/614a89f1-a845-4423-9356-15c70da6fb69)
+
+- Code to determine *imm* for decode logic implementation.
+
+```bash
+$imm[31:0] = $is_i_instr ? {{21{$instr[31]}}, $instr[30:20]} :
+	     $is_s_instr ? {{21{$instr[31]}}, $instr[30:25], $instr[11:7]} :
+	     $is_b_instr ? {{20{$instr[31]}}, $instr[7], $instr[30:25], $instr[11:8], 1'b0} :
+	     $is_j_instr ? {{12{$instr[31]}}, $instr[19:12], $instr[20], $instr[30:21], 1'b0} :
+	     $is_u_instr ? {$instr[31:12], 12'b0} :
+	     32'b0;
+```
+
+- Now, we will extract the other fields from the *instr* fetched, using the table below, which explains the construct of the 32 bits instructions in RISC-V.
+
+![Screenshot from 2023-08-22 17-42-24](https://github.com/Shant1R/RISC-V/assets/59409568/40b73231-c9f0-49d3-8876-b0e53334ea91)
+
+- While determining the other fields, we will create valid fields so that we generate the field only for the type of instructions it is required.
+
+- Code to determine the rest of the feilds.
+
+```bash
+	$opcode[6:0] = $instr[6:0];
+         
+         $funct7_valid = $is_r_instr ;
+         ?$funct7_valid
+            $funct7[6:0] = $instr[31:25];
+            
+         $funct3_valid = $is_r_instr || $is_i_instr || $is_s_instr || $is_b_instr;
+         ?$funct3_valid
+            $funct3[2:0] = $instr[14:12];
+         
+         $rs1_valid = $is_r_instr || $is_i_instr || $is_s_instr || $is_b_instr;
+         ?$rs1_valid
+            $rs1[4:0] = $instr[19:15];
+         
+         $rs2_valid = $is_r_instr || $is_s_instr || $is_b_instr;
+         ?$rs2_valid
+            $rs2[4:0] = $instr[24:20];
+         
+         $rd_valid = $is_r_instr || $is_i_instr || $is_u_instr || $is_j_instr;
+         ?$rd_valid
+            $rd[4:0]  = $instr[11:7];
+  
+```
+
+- Now, we will determine the individual instructions as per our need.
+
+![Screenshot from 2023-08-22 18-18-58](https://github.com/Shant1R/RISC-V/assets/59409568/58b7183a-515c-428c-b168-eda2d03631ef)
+
+- Code to determine the individual instructions highlightened.
+
+```bash
+	 $dec_bits [10:0] = {$funct7[5], $funct3, $opcode};
+
+     	 $is_beq = $dec_bits ==? 11'bx_000_1100011;
+         $is_bne = $dec_bits ==? 11'bx_001_1100011;
+         $is_blt = $dec_bits ==? 11'bx_100_1100011;
+         $is_bge = $dec_bits ==? 11'bx_101_1100011;
+         $is_bltu = $dec_bits ==? 11'bx_110_1100011;
+         $is_bgeu = $dec_bits ==? 11'bx_111_1100011;
+         $is_addi = $dec_bits ==? 11'bx_000_0010011;
+         $is_add = $dec_bits ==? 11'b0_000_0110011;
+         `BOGUS_USE($is_beq $is_bne $is_blt $is_bge $is_bltu $is_bgeu $is_addi $is_add)
+
+```
+
+- we give *`BOGUS_USE* to inform the complier that even if the variables listed are not consumed, not to throw a warning. It is not a fatel warning, yet this avoid the clutter in the log section.
+
+- Implementation of the complete Decode Logic over Makerchip IDE.
+
+![Screenshot from 2023-08-22 18-29-31](https://github.com/Shant1R/RISC-V/assets/59409568/fa4f6ad4-3c0d-4de0-a341-445a7bde0ba0)
+
  
 </details>
-
 
 <details>
 
@@ -1020,6 +1145,8 @@ m4+cpu_viz(@4)
 - https://www.vsdiat.com/
 - https://redwoodeda.com/
 - https://makerchip.com/
+- [https://riscv.org/](https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf)
+- https://inst.eecs.berkeley.edu/
 - https://github.com/riscv/riscv-gnu-toolchain
 - https://github.com/alwinshaju08/RISCV
 - https://github.com/mrdunker/RISC-V_based_MYTH_IIITB
