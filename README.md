@@ -743,7 +743,7 @@ Under this lab work, we design a calculator with a memory component.
 ```
 
 - Implementation on Makerchip IDE.
-
+  
 ![Screenshot from 2023-08-22 01-30-04](https://github.com/Shant1R/RISC-V/assets/59409568/c150a79a-19f3-4af2-b1f8-ecf6702a27a5)
 
 
@@ -753,7 +753,28 @@ Under this lab work, we design a calculator with a memory component.
 
 <details>
 <summary><strong>Wrap Up</strong></summary>
- 
+
+Towards the wrap up of day 3, we can explore examples on Makerchip for practice and get a grasp of heirarchy in TLverilog. 
+
+***Conway's Game of Life***
+
+The Game of Life, also known simply as "Life," is a cellular automaton devised by mathematician John Conway in 1970. It's not a traditional game with players,
+but rather a simulation that follows a set of rules to create patterns and behaviours.
+
+The Game of Life takes place on an infinite grid of cells, each of which can be in one of two states: alive or dead. The state of each cell evolves over discrete time steps based on its current state and the states of its eight neighbouring cells. The evolution is determined by the following rules:
+
+1. Any live cell with fewer than two live neighbours dies as if caused by underpopulation.
+2. Any live cell with two or three live neighbours survives to the next generation.
+3. Any live cell with more than three live neighbours dies, as if by overpopulation.
+4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+
+- Makerchip implementation.
+
+![Screenshot from 2023-08-22 11-35-34](https://github.com/Shant1R/RISC-V/assets/59409568/10d468e4-0c19-4200-9f4f-a68aca31bab1)
+
+
+
+
 </details>
 
 
