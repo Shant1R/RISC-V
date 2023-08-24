@@ -1259,6 +1259,31 @@ We will now look into how to create a testbench for the functionality of the con
 <details>
 	
 <summary><strong>Pipelining the CPU</strong></summary>
+
+Under this section, we will look into pipelining and its benefits, and pipeline the RISC-V CPU design. We will go over the possible hazards and how to work around to avoid hazards.
+
+First of all it is important to understand pipelining. It streamlines the process of retiming and considerably reducing the occurrence of functional errors. This technique enables faster computational tasks. We have listed the various benefits of pipelining as follows 
+
+- Increased throughput
+- Reduced latency
+- Better resource utilization
+- Improved parallelism
+- Smoother performance
+- Scalability
+- Faster clock speeds
+- Reduced dependencies
+- Flexibility
+- Efficient resource sharing
+
+
+As previously explained, establishing the pipeline is a straightforward process of incorporating stages labelled as @1, @2, and so on. A visual representation of the pipelining setup is provided below. In TL Verilog, it's important to note that there is no strict requirement to define the pipeline stages in a specific systematic order, providing an extra layer of benefit.
+
+The hazards that can arise in pipelining a design are listed as 
+
+1. 
+2. 
+3. 
+
  
 </details>
 
