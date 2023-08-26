@@ -1367,6 +1367,7 @@ We will look into how to get past the pipeline hazards.
 </details>
 
 
+
 <details>
 	
 <summary><strong>Load/Store Instructions and Completing the CPU</strong></summary>
