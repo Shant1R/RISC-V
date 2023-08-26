@@ -1341,7 +1341,7 @@ We will look into how to get past the pipeline hazards.
 - One such hazards, is ***read after write hazard***.
 - Schematic to tackle this is given below
 
-![Screenshot from 2023-08-26 13-52-59](https://github.com/Shant1R/RISC-V/assetys/59409568/9407a4be-754e-4af9-8a9e-3c17427fb408)
+![Screenshot from 2023-08-26 13-52-59](https://github.com/Shant1R/RISC-V/assets/59409568/0cc278bb-a3a0-4bd1-b5bf-a1615fd5077e)
 
 - Code introduced to the CPU for the tackle
 
@@ -1363,6 +1363,13 @@ We will look into how to get past the pipeline hazards.
 	// we will comment off the valid line
 	//$valid = $reset ? 1'b0 : ($start) ? 1'b1 : (>>3$valid) ; 
 ```
+
+- Now, we will decode the remaining ***RV32I Base Instruction Set***.
+- Once we complete the decoding, we finish the ALU logic for the decode instruction set.
+- Complete implementation on Makerchip IDE.
+
+![Screenshot from 2023-08-26 14-17-12](https://github.com/Shant1R/RISC-V/assets/59409568/a987207e-3859-49d1-adfd-a5bc1c67fa09)
+
  
 </details>
 
