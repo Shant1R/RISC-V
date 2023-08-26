@@ -1330,16 +1330,39 @@ $pc[31:0] = >>1$reset ? 32'b0 : (>>1$valid_taken_br)? (>>1$br_target_pc) : (>>1$
 
 ![Screenshot from 2023-08-26 13-45-11](https://github.com/Shant1R/RISC-V/assets/59409568/70257912-ee35-48f1-a691-5ef7a2e73d41)
 
-
-
-
-
- 
 </details>
 
 <details>
 	
 <summary><strong>Solutions to Pipelining Hazards</strong></summary>
+
+We will look into how to get past the pipeline hazards.
+
+- One such hazards, is ***read after write hazard***.
+- Schematic to tackle this is given below
+
+![Screenshot from 2023-08-26 13-52-59](https://github.com/Shant1R/RISC-V/assetys/59409568/9407a4be-754e-4af9-8a9e-3c17427fb408)
+
+- Code introduced to the CPU for the tackle
+
+```bash
+	$src1_value[31:0] = ((>>1$rf_wr_en) && (>>1$rd == $rs1 )) ? (>>1$result): $rf_rd_data1; 
+	$src2_value[31:0] = ((>>1$rf_wr_en) && (>>1$rd == $rs2 )) ? (>>1$result) : $rf_rd_data2;
+```
+
+- Now, we look into how to rectify the branch paths in the CPU core developed.
+- Scehmatic to rectify the brancg path followed
+
+![Screenshot from 2023-08-26 14-03-51](https://github.com/Shant1R/RISC-V/assets/59409568/be7b7145-cef0-40f5-a546-b6e321e019cc)
+
+- Code Introduced
+```bash
+ 	$pc[31:0] = (>>1$reset) ? 32'b0 : (>>3$valid_taken_br) ? (>>3$br_tgt_pc) :  (>>3$int_pc)  ;
+
+
+	// we will comment off the valid line
+	//$valid = $reset ? 1'b0 : ($start) ? 1'b1 : (>>3$valid) ; 
+```
  
 </details>
 
