@@ -1364,7 +1364,7 @@ We will look into how to get past the pipeline hazards.
 	//$valid = $reset ? 1'b0 : ($start) ? 1'b1 : (>>3$valid) ; 
 ```
 
-- Now, we will decode the remaining ***RV32I Base Instruction Set***.
+- Now, we will decode the remaining ***RV32I Base Instruction Set***. Can refer this page for a detailed discription --> [LINK](https://msyksphinz-self.github.io/riscv-isadoc/html/rvi.html)
 - Once we complete the decoding, we finish the ALU logic for the decode instruction set.
 - Complete implementation on Makerchip IDE.
 
