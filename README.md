@@ -1280,9 +1280,10 @@ As previously explained, establishing the pipeline is a straightforward process 
 
 The hazards that can arise in pipelining a design are listed as 
 
-1. 
-2. 
-3. 
+1. Control flow hazard
+2. Read after Write hazard
+
+
 
  
 </details>
