@@ -1373,11 +1373,34 @@ We will look into how to get past the pipeline hazards.
  
 </details>
 
-
-
 <details>
 	
 <summary><strong>Load/Store Instructions and Completing the CPU</strong></summary>
+
+Under this section, we will look into how to add the load and store data from register files and test program, followed by instantiation of the data memory unit. Towards the end we will look into how to generate branch control logic for the jump statements.
+
+- Schematic for how to redirect the load.
+
+![Screenshot from 2023-08-26 14-29-31](https://github.com/Shant1R/RISC-V/assets/59409568/3393e839-1c5d-47dd-baec-bd44656e5bf1)
+
+
+- Now, we look into the schematic flow to load data and implement this on makerchip.
+ 
+![Screenshot from 2023-08-26 14-30-53](https://github.com/Shant1R/RISC-V/assets/59409568/3dc7b2aa-4451-44d9-92a8-c6f16f91f1aa)
+
+- Now we begin with creating the data memory.
+- The block diagram for the memory structure, representing the inputs and outputs for the memory block are as follows.
+
+![Screenshot from 2023-08-26 14-34-12](https://github.com/Shant1R/RISC-V/assets/59409568/add76498-4e3a-4d62-ac83-a92a1780f8e4)
+
+- After the memory is instantiated, we try to load and store using different register and have a hands-on practice.
+
+- The final being is the integration of control for branching of jump statements.
+
+- The scehmatic diagram showing the implemetation of jump statement logic
+
+![Screenshot from 2023-08-26 14-36-14](https://github.com/Shant1R/RISC-V/assets/59409568/0754a026-2afe-4253-aa9b-bc8644095e4c)
+
  
 </details>
 
