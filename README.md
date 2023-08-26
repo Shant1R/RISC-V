@@ -1414,7 +1414,7 @@ Under this section, we will look into how to add the load and store data from re
 ## Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
 - [Steve Hoover](https://github.com/stevehoover), Founder, Redwood EDA
-- [Emil Jayanth Lal](https://github.com/mrdunker/)),Colleague,IIIT-Bangalore
+- [Emil Jayanth Lal](https://github.com/mrdunker/),Colleague,IIIT-Bangalore
 - [Alwin Shaju](https://github.com/alwinshaju08),Colleague,IIIT-Bangalore
 
 
