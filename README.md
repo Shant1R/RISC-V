@@ -1401,6 +1401,13 @@ Under this section, we will look into how to add the load and store data from re
 
 ![Screenshot from 2023-08-26 14-36-14](https://github.com/Shant1R/RISC-V/assets/59409568/0754a026-2afe-4253-aa9b-bc8644095e4c)
 
+***Final Implementaion on Makerchip IDE***
+![Screenshot from 2023-08-26 14-45-13](https://github.com/Shant1R/RISC-V/assets/59409568/c5b67fa3-4dd4-4b07-a226-47976682339f)
+
+***Diagram Generated along with the waveform and visualisation***
+![Screenshot from 2023-08-24 12-04-32](https://github.com/Shant1R/RISC-V/assets/59409568/c4a5d9ff-36ec-46c5-a3e1-8c0a969b47c5)
+
+
  
 </details>
 
