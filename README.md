@@ -1283,6 +1283,42 @@ The hazards that can arise in pipelining a design are listed as
 1. Control flow hazard
 2. Read after Write hazard
 
+Now, first we will look into how to pipeline the system, then will tackle the incoming hazards.
+
+***Creating 3-Cycle Valid Signal***
+- We make a start pulse to reset the previous cycle
+- The we make a 3 cycle loop of valid pulses.
+
+- Schematic Diagram for the design
+
+![Screenshot from 2023-08-26 11-41-33](https://github.com/Shant1R/RISC-V/assets/59409568/3a606141-01ed-4d92-985c-1721d41bf3d5)
+
+- Code for Makerchip IDE implementation.
+```bash
+	$valid = $reset ? 1'b0 : ($start) ? 1'b1 : (>>3$valid) ;
+	$start_int = $reset ? 1'b0 : 1'b1;
+	$start = $reset ? 1'b0 : ($start_int && !>>1$start_int);
+
+``` 
+
+***Invalid Cycles Adjustments***
+
+- Once we have created a 3 cycles with valid cycles, we get cycles in which there are non valid cycles.
+- We have to make sure invalid instruction does write in the register files and PC.
+- Schematic to be implemented
+
+![Screenshot from 2023-08-26 11-57-03](https://github.com/Shant1R/RISC-V/assets/59409568/052e6f9a-f931-47c0-ab4b-4d965ac4728b)
+
+- TLverilog code for implementation on Makerchip IDE.
+
+```bash
+// introducing valid_taken_br
+$valid_taken_br = $valid && $taken_branch;
+
+// updating the PC
+$pc[31:0] = >>1$reset ? 32'b0 : (>>1$valid_taken_br)? (>>1$br_target_pc) : (>>1$pc + 32'd4);
+         
+```
 
 
  
