@@ -1320,6 +1320,19 @@ $pc[31:0] = >>1$reset ? 32'b0 : (>>1$valid_taken_br)? (>>1$br_target_pc) : (>>1$
          
 ```
 
+***Logic Distribution into 3-Cycles***
+- Under this step we look into how to update the design to execute the logic into 3 cycles.
+- Schematic for distribution
+  
+![Screenshot from 2023-08-26 12-17-15](https://github.com/Shant1R/RISC-V/assets/59409568/0f8df85a-1c88-43c3-9f98-885be98ab6ed)
+
+- **Implementation of 3-Cycle Pipeline over MakerChip IDE.**
+
+![Screenshot from 2023-08-26 13-45-11](https://github.com/Shant1R/RISC-V/assets/59409568/70257912-ee35-48f1-a691-5ef7a2e73d41)
+
+
+
+
 
  
 </details>
